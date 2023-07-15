@@ -1,0 +1,45 @@
+/* ====================================
+    Default Theme
+  -------------------------------------
+    Fonts: Raleway & Open Sans
+  -------------------------------------
+    Colors:
+      Moon Yellow:    #f4c613
+      Grey:           #212226
+      White Smoke:    #f4f4f4
+      White:          #fff
+      Black:          #000
+      Charcoal:       #323e4f
+  -------------------------------------
+  
+==================================== */
+
+/* ====================================
+    General CSS
+==================================== */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: #212226;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+  /*font-family: "Raleway", sans-serif;*/
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+}

@@ -1,0 +1,23 @@
+@media screen and (max-width: 768px) {
+  .meun > .item {
+    text-align: center;
+    width: 100%;
+    order: 3;
+    display: none;
+  }
+
+  .meun > .btn-sayHello {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .meun > .btn-sayHello > a {
+    padding: 5px 18px;
+    font-size: 17px;
+  }
+
+  .nav-toggle {
+    display: block;
+    order: 2;
+  }
+}

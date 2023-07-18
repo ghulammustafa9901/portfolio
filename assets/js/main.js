@@ -6,10 +6,10 @@ navToggle.addEventListener("click", function () {
   if (navToggle.classList.contains("open")) {
     navToggle.classList.remove("open");
     offCanvas.classList.remove("off-canvas-click");
-    bodyElement.classList.remove("shadow");
+    bodyElement.classList.remove("shadow1");
   } else {
     navToggle.classList.add("open");
     offCanvas.classList.add("off-canvas-click");
-    bodyElement.classList.add("shadow");
+    bodyElement.classList.add("shadow1");
   }
 });

@@ -75,10 +75,11 @@
 
   .profile-text {
     align-items: center;
+    text-align: center;
   }
 
   .intro__text {
-    font-size: 22px;
+    font-size: 26px;
     margin-bottom: 10px;
   }
 

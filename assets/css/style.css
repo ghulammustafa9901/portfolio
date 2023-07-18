@@ -245,6 +245,7 @@ body {
   -webkit-transform: rotateZ(45deg) scaleX(1.3);
   -ms-transform: rotateZ(45deg) scaleX(1.3);
   transform: rotateZ(45deg) scaleX(1.3);
+  background-color: #fff;
 }
 
 .nav-toggle.open .icon-left::after {
@@ -252,6 +253,7 @@ body {
   -webkit-transform: rotateZ(-45deg) scaleX(1.3);
   -ms-transform: rotateZ(-45deg) scaleX(1.3);
   transform: rotateZ(-45deg) scaleX(1.3);
+  background-color: #fff;
 }
 
 .nav-toggle.open .icon-right::before {
@@ -259,6 +261,7 @@ body {
   -webkit-transform: rotateZ(-45deg) scaleX(1.3);
   -ms-transform: rotateZ(-45deg) scaleX(1.3);
   transform: rotateZ(-45deg) scaleX(1.3);
+  background-color: #fff;
 }
 
 .nav-toggle.open .icon-right::after {
@@ -266,6 +269,7 @@ body {
   -webkit-transform: rotateZ(45deg) scaleX(1.3);
   -ms-transform: rotateZ(45deg) scaleX(1.3);
   transform: rotateZ(45deg) scaleX(1.3);
+  background-color: #fff;
 }
 
 /* Navbar for Mobile */
@@ -281,10 +285,6 @@ body {
   transform: translateX(220px);
   transition: 0.5s ease-in-out all;
   z-index: 1;
-}
-
-.off-canvas-click {
-  transform: translateX(0);
 }
 
 .off-canvas > ul {
@@ -326,14 +326,17 @@ body {
   right: 20%;
 }
 
-.shadow::after {
+.off-canvas-click {
+  transform: translateX(0);
+}
+
+.shadow1::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: 1;
   background: rgba(0, 0, 0, 0.7);
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;

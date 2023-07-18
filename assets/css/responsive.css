@@ -57,8 +57,9 @@
     text-align: center;
   }
 
-  .profile-text > div:nth-child(even) > a {
+  .profile-text > div:nth-child(odd) > a {
     font-size: 14px;
+    font-weight: 500;
   }
 
   .social-icon > li > a {

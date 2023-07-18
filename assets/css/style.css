@@ -29,6 +29,28 @@ body {
   background-color: #fff;
 }
 
+/* Scrollbar */
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #323e4f;
+}
+
 /* ====================================
     Navbar
 ==================================== */
@@ -93,22 +115,43 @@ body {
 .meun > .btn-sayHello {
   list-style: none;
   margin-left: 18px;
+  /* overflow: hidden; */
 }
 
 .meun > .btn-sayHello > a {
   padding: 8px 28px;
   border: 3px solid #323e4f;
   color: #323e4f;
+  background-color: #fff;
   font-size: 18px;
   font-weight: 600;
   border-radius: 26px;
   text-decoration: none;
-  transition: 0.3s ease-in-out all;
+  transition: 0.3s ease all;
   display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.meun > .btn-sayHello:hover > a {
+.meun > .btn-sayHello a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
   background-color: #323e4f;
+  color: #fff;
+  transition: 0.3s ease all;
+  z-index: -1;
+}
+
+.meun > .btn-sayHello > a:hover::after {
+  left: 0;
+}
+
+.meun > .btn-sayHello > a:hover {
   color: #fff;
 }
 
@@ -520,6 +563,14 @@ body {
     -webkit-clip-path: inset(1% 0 81% 0);
     clip-path: inset(1% 0 81% 0);
   }
+}
+
+.profile-img-mbl {
+  display: none;
+}
+
+.profile-img-mbl > img {
+  width: 50%;
 }
 
 .btn-profile-about {

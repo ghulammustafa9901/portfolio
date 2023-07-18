@@ -1,4 +1,19 @@
+@media screen and (max-width: 1024px) {
+  .intro__text {
+    font-size: 38px;
+    letter-spacing: 7px;
+  }
+
+  .profile-text > div > h5 {
+    font-size: 18px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+  .profile {
+    height: fit-content;
+  }
+
   .meun > .item {
     text-align: center;
     width: 100%;
@@ -20,11 +35,53 @@
     display: block;
     order: 2;
   }
+
+  .intro__text {
+    font-size: 30px;
+    margin-bottom: 14px;
+    text-align: center;
+    letter-spacing: 5px;
+  }
+
+  .profile-img-mbl {
+    display: flex;
+    justify-content: center;
+  }
+
+  .profile-img {
+    display: none;
+  }
+
+  .profile-text > div > h5 {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .profile-text > div:nth-child(even) > a {
+    font-size: 14px;
+  }
+
+  .social-icon > li > a {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 425px) {
   .meun > .btn-sayHello > a {
     border-width: 2px;
     font-weight: 500;
+  }
+
+  .profile-text {
+    align-items: center;
+  }
+
+  .intro__text {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .profile-text > div:nth-child(even) > a {
+    font-size: 13px;
   }
 }

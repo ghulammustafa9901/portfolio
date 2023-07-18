@@ -127,7 +127,6 @@ body {
   display: block;
   position: relative;
   overflow: hidden;
-  z-index: 1;
 }
 
 .meun > .btn-sayHello a::after {

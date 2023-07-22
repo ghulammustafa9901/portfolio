@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Animation Progress Bar</title>
+    <!-- Include AOS CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+    />
+    <style>
+      .bar {
+        height: 100%;
+        background-color: #007bff;
+        border-radius: 10px;
+        transition: width 1s;
+      }
+
+      .progressBar {
+        width: 100%;
+        height: 12px;
+        background-color: #eee;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="height: 100vh; width: 100vh">ds</div>
+    <div
+      class="progressBar"
+      data-aos="animate-progress"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-progress-value="75"
+    >
+      <div class="bar" style="width: 0"></div>
+    </div>
+
+    <div
+      class="progressBar"
+      data-aos="animate-progress"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-progress-value="40"
+    >
+      <div class="bar" style="width: 0"></div>
+    </div>
+
+    <div
+      class="progressBar"
+      data-aos="animate-progress"
+      data-aos-offset="0"
+      data-aos-duration="1000"
+      data-progress-value="90"
+    >
+      <div class="bar" style="width: 0"></div>
+    </div>
+
+    <div style="height: 100vh; width: 100vh">ds</div>
+
+    <!-- Include AOS JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Your JavaScript code -->
+    <script>
+      // Initialize AOS
+      // AOS.init();
+
+      // function animateProgressBar() {
+      //   const progressBars = document.querySelectorAll(".progressBar");
+      //   progressBars.forEach((progressBar) => {
+      //     const progressValue = progressBar.getAttribute("data-progress-value");
+      //     const bar = progressBar.querySelector(".bar");
+      //     console.log(progressValue);
+      //     bar.style.width = `${progressValue}%`;
+      //   });
+      // }
+
+      function animateProgressBar() {
+        const progressBars = document.querySelectorAll(".progressBar");
+        progressBars.forEach((progressBar) => {
+          const rect = progressBar.getBoundingClientRect();
+          const progressBarTop = rect.top;
+          const progressBarBottom = rect.bottom;
+
+          console.log("top " + rect.top);
+          console.log("bottom " + rect.bottom);
+
+          const windowBottom = window.innerHeight;
+
+          // Check if the progress bar is in the viewport
+          if (progressBarBottom > 0 && progressBarTop < windowBottom) {
+            const progressValue = progressBar.getAttribute(
+              "data-progress-value"
+            );
+            const bar = progressBar.querySelector(".bar");
+            bar.style.width = `${progressValue}%`;
+          }
+        });
+      }
+
+      // Call the animateProgressBar function on page load
+      window.addEventListener("load", animateProgressBar);
+
+      // Initialize AOS after page load
+      window.addEventListener("load", () => {
+        AOS.init();
+      });
+
+      // Attach the animateProgressBar function to the scroll event
+      window.addEventListener("scroll", animateProgressBar);
+    </script>
+  </body>
+</html>

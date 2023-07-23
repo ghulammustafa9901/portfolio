@@ -43,6 +43,10 @@ body {
   text-align: justify;
 }
 
+.fs-14 {
+  font-size: 14px;
+}
+
 /* Scrollbar */
 
 /* width */
@@ -88,7 +92,7 @@ body {
 
 .vertical-heading h2,
 .horizontal-heading h2 {
-  margin: 24px 0 22px 35px;
+  margin: 24px 0 22px 40px;
   font-weight: 200;
   font-size: 42px;
   line-height: 45px;
@@ -763,4 +767,148 @@ body {
   border-radius: 5px;
   font-weight: 700;
   color: #666;
+}
+
+.project {
+  height: 400px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+  position: relative;
+  transition: 0.3s all;
+}
+
+.project:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+}
+
+.project:hover:after {
+  opacity: 1;
+}
+
+.project img {
+  width: 100%;
+  transition: 0.3s all;
+  animation: scroll-project 40s infinite;
+}
+
+@keyframes scroll-project {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(calc(-100% + 400px));
+  }
+}
+
+.project .desc {
+  padding: 15px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  opacity: 0;
+  transition: 0.3s all;
+  transform: translateY(50px);
+}
+
+.project:hover .desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project .desc > span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.project .lang,
+.offcanvas-body .lang {
+  margin-top: 10px;
+}
+
+.project .lang span,
+.offcanvas-body .lang span {
+  font-size: 12px;
+  padding: 6px 10px;
+  background-color: #696869;
+  border-radius: 16px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+
+.project a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  z-index: 1000;
+}
+
+.offcanvas.offcanvas-end {
+  width: 500px;
+}
+
+.offcanvas-body-img {
+  height: 300px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+}
+
+.offcanvas-body-img > img {
+  width: 100%;
+  transition: 0.3s all;
+  animation: scroll-project 40s infinite;
+}
+
+@keyframes scroll-project-2 {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(calc(-100% + 300px));
+  }
+}
+
+.offcanvas-body .lang span {
+  border-radius: 4px;
+  color: #fff;
+  margin-left: 4px;
+  margin-bottom: 10px;
+}
+
+.offcanvas-body a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+.offcanvas-body a:hover {
+  text-decoration: underline;
+}
+
+.open-project {
+  background-color: #3f566e;
+  position: fixed;
+  width: 500px;
+  right: 0;
+  bottom: 0px;
+  padding: 17px;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+  font-size: 18px;
 }
